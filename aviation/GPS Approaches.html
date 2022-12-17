@@ -5,15 +5,15 @@
   <meta charset='UTF-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1' />
   <title>
-    Fleet Air Arm – Corkmaster
+    GPS Approaches – Corkmaster
   </title>
   
     
-      <meta property='og:description' content='test' />
+      <meta property='og:description' content='Where things like terrain or obstacles prohibit vertical guidance, lateral only approaches can be published:' />
       <meta property='og:site_name' content='Corkmaster' />
       <meta property='og:image' content />
       <meta property='og:type' content='website' />
-      <meta property='og:title' content='Fleet Air Arm' />
+      <meta property='og:title' content='GPS Approaches' />
     
     
       <base href='/' />
@@ -411,41 +411,6 @@
     
       <!-- Variable bindings for this tree-->
   
-  
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
-        </path>
-      </svg>
-      
-  
-    <a class='font-bold text-blue-600 hover:underline truncate' title='Fleet Air Arm' href='aviation/Fleet%20Air%20Arm.html'>
-      Fleet Air Arm
-    </a>
-    
-      
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-    
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
     
       
     
@@ -468,7 +433,42 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='GPS Approaches' href='aviation/GPS%20Approaches.html'>
+    <a class='hover:underline truncate' title='Fleet Air Arm' href='aviation/Fleet%20Air%20Arm.html'>
+      Fleet Air Arm
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+  
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
+        </path>
+      </svg>
+      
+  
+    <a class='font-bold text-blue-600 hover:underline truncate' title='GPS Approaches' href='aviation/GPS%20Approaches.html'>
       GPS Approaches
     </a>
     
@@ -495,21 +495,41 @@
           <main class='px-4 py-4'>
             <h1 class='flex items-end justify-center mb-4 p-3 bg-blue-100 text-5xl font-extrabold text-black rounded'>
   <a class='z-40 tracking-tighter '>
-    Fleet Air Arm
+    GPS Approaches
   </a>
 </h1>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
-  
+  <h2 id='non-precision-2d-approaches' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Non-Precision (2D Approaches)</h2>
     <p class='mb-3'>
-      test
+      Where things like terrain or obstacles prohibit vertical guidance, lateral only approaches can be published:
+    </p>
+  <h3 id='lnav-lateral-navigation' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>LNAV: Lateral Navigation</h3>
+    <p class='mb-3'>
+      A traditional GPS approach with lateral guidance only. MDA will typically be as high as 400ft.
+    </p>
+  <h3 id='lp-localiser-performance' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>LP: Localiser Performance</h3>
+    <p class='mb-3'>
+      The newest type of approach, introduced in 2009. The lateral guidance is angular, with increasing sensitivity closer to the MAP, like a localiser. This differs from traditional LNAV where the sensitivity is constant from the FAF to the MAP. LP therefore gets a lower MDA usually.
+    </p>
+  <h2 id='apv-approach-with-vertical-guidance-3d-approaches' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>APV: Approach with Vertical Guidance (3D Approaches)</h2><h4 id='lpv-localiser-performance-with-vertical-guidance' class='mt-6 mb-2 text-2xl font-bold text-gray-700'>LPV: Localiser Performance with Vertical Guidance</h4>
+    <p class='mb-3'>
+      Require [WAAS/SBAS] capable receivers. Technically still ‘non-precision’, but can get you down to a low decision altitude, like an ILS, often 200 feet.
+    </p>
+  <h4 id='lnavvnav-lateral-navigationvertical-navigation' class='mt-6 mb-2 text-2xl font-bold text-gray-700'>LNAV/VNAV: Lateral Navigation/Vertical Navigation</h4>
+    <p class='mb-3'>
+      They were the first GPS approaches with vertical guidance and designed for use with [baro-aided GPS] originally, but can also be used with [WAAS/SBAS] capable recievers these days. They are less sensitive than LPV so don’t get you as low.
+    </p>
+  <h4 id='lnav-v-lnav-with-advisory-vertical-guidance' class='mt-6 mb-2 text-2xl font-bold text-gray-700'>LNAV +V: LNAV with ‘advisory vertical guidance’</h4>
+    <p class='mb-3'>
+      A [WAAS/SBAS] capable receiver can offer advisory guidance on a traditional LNAV only ‘step-down’ approach. This is not displayed on the chart but the GPS receiever will display it if it is capable. The minimum altitidue is still the LNAV MDA.
     </p>
   
 
   <div class='flex items-center justify-center mt-2'>
   
     
-      <a class='text-gray-300 hover:text-blue-600 text-sm' title='Edit this page on GitHub' href='https://github.com/srid/emanote-template/edit/master/aviation/Fleet Air Arm.md'>
+      <a class='text-gray-300 hover:text-blue-600 text-sm' title='Edit this page on GitHub' href='https://github.com/srid/emanote-template/edit/master/aviation/GPS Approaches.md'>
         <svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
           <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z'></path>
         </svg>
